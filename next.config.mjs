@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: false,
     images: {
-        domains: ["checkyourproject.info"],
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "backend.staffshaw.com",
+                pathname: "/public/storage/blogs/**",
+            },
+        ],
     },
 };
 
